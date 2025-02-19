@@ -22,5 +22,5 @@ print(dinner_list)
 for amici in dinner_list:
     print(f"{amici} cena confermata")
 
-del dinner_list
+del dinner_list[0]
 print(dinner_list)

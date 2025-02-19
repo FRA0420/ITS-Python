@@ -6,7 +6,7 @@ for n in mylist:
     if n % 2 == 0:
         somma += n
         media = somma/n
-        print(somma)
-        print(media)
+print(f"la somma è:{somma}")
+print(f"la media è:{media}")
     
         
