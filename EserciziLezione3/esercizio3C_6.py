@@ -23,28 +23,94 @@ match animal:
         animal_type = animal
     case _:
         print(f"Mi dispiace non sono in grado di classificare {animal}")
-        animal_type = "unknown"
-'''dict_animale_categoria:dict = {'Animale': animal_type,'Habitat': habitat}
-animale_in_acqua:list[str]=["balena", "delfino", "tartaruga", "coccodrillo", pesci]
-animale_terra:list[str]=[mammiferi[:-2], rettili[:2]]
-animale_aria:list[str]=[uccelli[:4]]
-for element in categorie_habitat:
-    if element == "acqua":
+        animal_type = animal
+
+    
+match habitat:
+    case habitat if habitat in categorie_habitat and habitat == categorie_habitat[0]:
         match animal_type:
-            case animal_type if animal_type in animale_in_acqua:
-                print("")'''
-habitat:str=input(f"Inserire un habitat dove vive l'animale {animal_type}: ").lower()
-if habitat in categorie_habitat:
-    if habitat == categorie_habitat[0]:
-        match animal_type:
+            case animal_type if animal_type in mammiferi and animal_type in mammiferi[0:5]:
+                print(f"L'animale {animal_type} non può vivere in {categorie_habitat[0]}!")
+            case animal_type if animal_type in mammiferi and animal_type in mammiferi[5:7]:
+                print(f"L'animale {animal_type} può vivere in {categorie_habitat[0]}!")
             case animal_type if animal_type in pesci:
-                print(f"L'animale {animal_type} ")
+                print(f"L'animale {animal_type} può vivere in {categorie_habitat[0]}!")
+            case animal_type if animal_type in uccelli[0:4]:
+                print(f"L'animale {animal_type} non può vivere in {categorie_habitat[0]}!")
+            case animal_type if animal_type in uccelli[6:8]:
+                print(f"L'animale {animal_type} non può vivere in {categorie_habitat[0]}!")
+            case animal_type if animal_type in uccelli[4:6]:
+                print(f"L'animale {animal_type} non vive ma sta anche in {categorie_habitat[0]}!")
+            case animal_type if animal_type in rettili[0:2]:
+                print(f"L'animale {animal_type} non può vivere in {categorie_habitat[0]}!")
+            case animal_type if animal_type in rettili[2:4]:
+                print(f"L'animale {animal_type} può vivere anche in {categorie_habitat[0]}!")
+            case _:
+                print(f"Mi dispiace non so se {animal_type} vive nell'{categorie_habitat[0]}")
+    case habitat if habitat in categorie_habitat and habitat == categorie_habitat[1]:
+        match animal_type:
+            case animal_type if animal_type in mammiferi:
+                print(f"L'animale {animal_type} non può volare!")
+            case animal_type if animal_type in rettili:
+                print(f"L'animale {animal_type} non può volare!")
+            case animal_type if animal_type in pesci:
+                print(f"L'animale {animal_type} non può volare!")
+            case animal_type if animal_type in uccelli[0:4]:
+                print(f"L'animale {animal_type} vola, quindi vive in {categorie_habitat[1]}")
+            case animal_type if animal_type in uccelli[4:6]:
+                print(f"L'animale {animal_type} può volare ma male quindi non vive in {categorie_habitat[1]}")
+            case animal_type if animal_type in uccelli[6:8]:
+                print(f"L'animale {animal_type} non sa volare sigh, non vive in {categorie_habitat[1]}")
+            case _:
+                print(f"Mi dispiace non so se {animal_type} vive nell'{categorie_habitat[1]}")
+    case habitat if habitat in categorie_habitat and habitat == categorie_habitat[2]:
+        match animal_type:
+            case animal_type if animal_type in mammiferi[0:5]:
+                print(f"L'animale {animal_type} vive sulla {categorie_habitat[2]}!")
+            case animal_type if animal_type in mammiferi[5:7]:
+                print(f"L'animale {animal_type} non può vivere sulla {categorie_habitat[2]}!")
+            case animal_type if animal_type in pesci:
+                print(f"L'animale {animal_type} non può vivere sulla {categorie_habitat[2]}!")
+            case animal_type if animal_type in uccelli[0:4]:
+                print(f"L'animale {animal_type} di solito non vive sulla {categorie_habitat[0]}")
+            case animal_type if animal_type in uccelli[4:6]:
+                print(f"L'animale {animal_type} può vivere anche sulla {categorie_habitat[2]}!")
+            case animal_type if animal_type in uccelli[6:8]:
+                print(f"L'animale {animal_type} vive sulla {categorie_habitat[2]}!")
+            case animal_type if animal_type in rettili[0:2]:
+                print(f"L'animale {animal_type} vive sulla {categorie_habitat[2]}!")
+            case animal_type if animal_type in rettili[2:4]:
+                print(f"L'animale {animal_type} può vivere anche sulla {categorie_habitat[2]}!")
+            case _:
+                print(f"Mi dispiace non so se {animal_type} vive sulla {categorie_habitat[2]}")
+    case _:
+        print(f"Mi dispiace non ho informazione sull'habitat {habitat}")
+
             
 
 
 
-else:
-    print("Habitat non valido")
+
+            
+
+
+
+                
+
+
+            
+
+            
+        
+        
+
+            
+            
+                
+
+
+
+
 
 
 
