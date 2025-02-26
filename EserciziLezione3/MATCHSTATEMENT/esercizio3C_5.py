@@ -1,7 +1,7 @@
 person:dict={"Nome": None , "Ruolo": None, "Età": None}
-person["Nome"]:str=input("Inserisci il tuo nome: ").title()
-person["Ruolo"]:str=input("Inserisci il tuo ruolo: ").title()
-person["Età"]:int=int(input("Inserisci la tua età: "))
+person["Nome"]=input("Inserisci il tuo nome: ").title()
+person["Ruolo"]=input("Inserisci il tuo ruolo: ").title()
+person["Età"]=int(input("Inserisci la tua età: "))
 
 if person['Età'] <18:
     print("Attenzione! Utente minorenne. Accesso limitato! Alcune funzionalità sono bloccate")

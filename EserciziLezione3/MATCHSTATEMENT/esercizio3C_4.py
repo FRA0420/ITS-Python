@@ -16,3 +16,4 @@ match animal:
     case _:
         print(f"Mi dispiace non sono in grado di classificare {animal}")
 
+
