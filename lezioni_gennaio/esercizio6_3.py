@@ -4,4 +4,4 @@ glossary: dict = {"function": "boh", "collections": "più cose", "stringhe": "bl
 print(glossary)
 
 for k,v in glossary.items():
-    print(k,v)
+    print(f"Il termine {k} ha come significato: \n{v}")

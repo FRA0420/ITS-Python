@@ -7,4 +7,12 @@ dict14: dict = { "first_name":"Valerio", "last_name":"nerd", "age": 28, "city": 
 
 people: list = [dict1,dict13,dict14]
 for i in people:
-    print(i)
+    if i == people[0]:
+        for k,v in dict1.items():
+            print(f"{k}: {v}")
+    if i == people[1]:
+        for k,v in dict13.items():
+            print(f"{k}: {v}")
+    if i == people[2]:
+        for k,v in dict14.items():
+            print(f"{k}: {v}")

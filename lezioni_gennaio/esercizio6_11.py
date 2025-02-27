@@ -1,11 +1,15 @@
-roma:dict={"country":"italia", "population": 6000000 , "zona":"centro"}
-napoli:dict= {"country":"italia", "population": 800000 , "zona": "sud"}
-firenze:dict={"country":"italia", "population": 800000 , "zona": "nord"}
+cities:dict[str]={"Roma":{"Monument": "Colosseo", "Abitanti": 6000000, 
+        "Paese": "Italia"},"Londra": {"Monument": "LondonEye", 
+             "Abitanti": 30000000, "Paese": "Inghilterra"}, "Edimburgo": {"Monumet":"Castello", 
+                "Abitanti": 10000000, "Paese": "Scozia"}}
+for k,v in cities.items():
+    print(f"{k.title()}:")
+    for keys, values in v.items():
+        print(f"{keys.title()} ---> {values}")
 
-cities:dict={roma:"bella", napoli:"caotica" , firenze: "top"}
+    
+        
 
-for i in cities:
-    print(f"{i.title()}: ")
-    for k,v in cities[i].items():
-        print(f"{k.title()}-->{v}")
-              
+
+
+

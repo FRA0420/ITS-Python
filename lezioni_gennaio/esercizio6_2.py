@@ -1,9 +1,8 @@
 #esercizio 6.2
 
-dict2: dict = {"k1": 17, "k2": 16, "k3": 19, "k4": 666}
+dict2: dict = {"Chiara": 17, "Leo": 16, "Giulia": 19
+               , "Riccardo": 666}
+for k,v in dict2.items():
+    print(f"Il numero preferito di {k} è {v}")
 
-chiara = dict2["k1"]
-leo = dict2["k2"]
-giulia = dict2["k3"]
-ric = dict2["k4"]
-print(f" Il numero preferito di Chiara è: {chiara} \nil numero preferito di leo è {leo}, \n il numero preferito di giulia è{giulia}, \nil numero preferito di ric è {ric}")
+
