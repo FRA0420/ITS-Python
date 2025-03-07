@@ -31,13 +31,14 @@ chiave_max:int = 0
 for frequenza in dizionario_n.keys():
     if dizionario_n[frequenza] > freq_max:
         freq_max= dizionario_n[frequenza]
-        chiavi_max=()
+        chiavi_max=[]
         chiavi_max.append(frequenza)
     elif dizionario_n[frequenza] == freq_max:
         chiavi_max.append(frequenza)
+chiave_frequente=chiavi_max
 print(f"la somma dei numeri pari è: {somma_pari}")
 print(f"la media dei numeri dispari è: {media_dispari}")
-print(f"Il o i numero/i con la frequenza più alta è o sono: {chiavi_max} ({freq_max} volte)")    #non sono riuscita a stampare l'output finale senza le [] della lista :(
+print("Il o i numero/i con la frequenza più alta è o sono:" , *chiavi_max , (freq_max , "volte"))    #non sono riuscita a stampare l'output finale senza le [] della lista :(
 
 
 
