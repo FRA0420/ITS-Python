@@ -21,9 +21,11 @@ for element in lista_n:
         somma_pari += element
     else:
         lista_dispari.append(element)
+if lista_dispari == []:
+    exit()
 for disparo in lista_dispari:
-    somma_dispari+= disparo
-    media_dispari= somma_dispari/len(lista_dispari)
+        somma_dispari+= disparo
+        media_dispari= somma_dispari/len(lista_dispari)
 #adesso la frequenza
 freq_max:int= 0
 chiavi_max:list[int] =[]
@@ -38,7 +40,7 @@ for frequenza in dizionario_n.keys():
 chiave_frequente=chiavi_max
 print(f"la somma dei numeri pari è: {somma_pari}")
 print(f"la media dei numeri dispari è: {media_dispari}")
-print("Il o i numero/i con la frequenza più alta è o sono:" , *chiavi_max , (freq_max , "volte"))    #non sono riuscita a stampare l'output finale senza le [] della lista :(
+print("Il o i numero/i con la frequenza più alta è o sono:" , *chiavi_max , (freq_max , "volte"))   #non sono riuscita a stampare l'output finale senza le [] della lista :(
 
 
 
