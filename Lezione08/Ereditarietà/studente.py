@@ -8,3 +8,4 @@ class Studente(Persona):
 #e partendo da quella posso costruire classi
 #più articolate x aggiungere info in più
 #classe studente sottoclasse della classe Persona 
+

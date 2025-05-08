@@ -133,23 +133,28 @@
 # print(blackjack_hand_total([11, 5, 5]))
 # 21
 
-def blackjack_hand_total(cards:list[int]):
-    somma = 0
-    for i in cards:
-        somma+=i
-        if somma > 21:
-            if 11 or 1 in cards:
-                somma -= 10
+# def blackjack_hand_total(cards:list[int]):
+#     somma = 0
+#     for i in cards:
+#         somma+=i
+#         if somma > 21:
+#             if 11 or 1 in cards:
+#                 somma -= 10
         
             
-    return somma
+#     return somma
+# print(blackjack_hand_total([2,3,5]))
+# print(blackjack_hand_total([11, 5, 5]))
+# print(blackjack_hand_total([11,1,10]))
+
+floors:list=[1,4]
+
+numeri= [i for i in range(floors[0],floors[-1] +1)]
+print(numeri)
 
             
 
 
 
-print(blackjack_hand_total([2,3,5]))
-print(blackjack_hand_total([11, 5, 5]))
-print(blackjack_hand_total([11,1,10]))
 
 
