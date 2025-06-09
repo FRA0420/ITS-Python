@@ -133,3 +133,36 @@ class MovieCatalog:
             #se il regista non è nel catalogo
             else:
                 return f"Il regista {director_name} non è nel catalogo"
+            
+    def search_movies_by_title(self, title:str)->dict[str,list[str]]:
+        title = title.lower()
+        risultati= {}
+        for director,films in self.catalog.items():
+            trovati = []
+            for film in films:
+                if title in film.lower():
+                    trovati.append(film)
+
+            if trovati:
+                risultati[director] = trovati
+            if not risultati:
+                return f"Nessun film trovato contentente la parola '{title}'"
+        
+            return risultati
+        
+    # Test MovieCatalog
+catalog = MovieCatalog()
+
+print(catalog.add_movies("Christopher Nolan", ["Inception", "Interstellar"]))
+print(catalog.add_movies("Quentin Tarantino", ["Pulp Fiction", "Django Unchained"]))
+print(catalog.add_movies("Christopher Nolan", ["Tenet", "Inception"]))  # evita duplicati
+
+print(catalog.remove_movie("Quentin Tarantino", "Pulp Fiction"))
+print(catalog.remove_movie("Quentin Tarantino", "Django Unchained"))  # rimuove tutto
+
+print(catalog.list_directors())
+print(catalog.get_movies_by_director("Christopher Nolan"))
+
+print(catalog.search_movies_by_title("in"))  # trova "Inception" e "Interstellar"
+
+
