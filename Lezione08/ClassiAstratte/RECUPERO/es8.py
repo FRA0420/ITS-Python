@@ -27,12 +27,12 @@ class Customer():
         self.rented_movies:list[Movie]=[]
 
 
-    def rent_movie(self,movie:Movie)->None:
-
-        if movie not in self.rented_movies:
-            self.rented_movies.append(movie)
-        else:
-            print(f"Il film {movie.title} è già noleggiato")
+    # def rent_movie(self,movie:Movie)->None:
+# SBAGLIATO
+    #     if movie not in self.rented_movies:
+    #         self.rented_movies.append(movie)
+    #     else:
+    #         print(f"Il film {movie.title} è già noleggiato")
 
     def return_movie(self,movie:Movie)->None:
 
@@ -42,7 +42,7 @@ class Customer():
             print(f"Il film {movie.title} non è stato noleggiato da questo cliente")
 
     
-class VideoRentalStore():
+class VideoRentalStore:
 
     def __init__(self):
         self.movies:dict[str,Movie]={}

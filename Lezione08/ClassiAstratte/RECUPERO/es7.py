@@ -1,4 +1,4 @@
-class ContactManager():
+class ContactManager:
     
     def __init__(self):
         self.contacts:dict[str,list[str]]={}

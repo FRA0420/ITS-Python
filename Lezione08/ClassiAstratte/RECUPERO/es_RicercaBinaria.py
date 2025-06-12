@@ -1,6 +1,4 @@
 def ricerca_binaria(lista:list[int],n:int)->bool:
-    lista.sort()
-    print(lista)
     inizio=0
     fine=len(lista)-1
 
@@ -20,4 +18,4 @@ def ricerca_binaria(lista:list[int],n:int)->bool:
 
         
 
-print(ricerca_binaria([1,2,3,7,5],5))
+print(ricerca_binaria([1,2,3,5,7],5))

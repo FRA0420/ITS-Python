@@ -20,9 +20,11 @@
 def sum_primary_diagonal(matrix:list[list[int]])->int:
     total = 0
     for i in range(len(matrix)):
-        total += matrix[i][i]
-    return total
+        for y in range(len(matrix[i])):
+            if i == y:
+                total+=matrix[i][y]
 
+    return total
 
 def sum_secondary_diagonal(matrix:list[list[int]])->int:
     total = 0 
